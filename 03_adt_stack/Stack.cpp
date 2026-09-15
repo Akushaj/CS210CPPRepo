@@ -25,14 +25,21 @@ void Stack::push(int value) {
 }
 
 int Stack::pop() {
-    // TODO: if data_ isn't empty, remove the top element
-    return 0;
+    if (isEmpty()) {
+        std::cout<< "Stack is Empty" <<std::endl;
+        return -1;
+    }
+    int value = data[topIndex - 1];
+    topIndex--;
+    return value;
 }
 
 int Stack::peek() const {
-    // TODO: return the top element of data_
-    // undefined if empty -- callers should check isEmpty() first. We'll
-    // harden this kind of thing later in the course.
+    if (isEmpty()) {
+        std::cout<< "Stack is Empty" << std::endl;
+        return -1;
+    }
+    return data[topIndex - 1];
     return 0;
 }
 

@@ -8,13 +8,20 @@
 
 #include "Stack.h"
 
+#include <iostream>
+
 Stack::Stack() {
     topIndex = 0;
 }
 
 void Stack::push(int value) {
-    // TODO: add value to the top of data_ (vector has a method for this)
 
+    if (isFull()) {
+        std::cout<< "Stack is Full" << std::endl;
+        return;
+    }
+    data[topIndex] = value;
+    topIndex++;
 }
 
 int Stack::pop() {

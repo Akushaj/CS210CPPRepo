@@ -40,7 +40,6 @@ int Stack::peek() const {
         return -1;
     }
     return data[topIndex - 1];
-    return 0;
 }
 
 bool Stack::isEmpty() const {

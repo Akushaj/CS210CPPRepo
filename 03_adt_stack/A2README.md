@@ -1,0 +1,3 @@
+## REFLECTION QUESTIONS
+### Qn1. What value does topIndex hold immediately after construction, and why does that specific value make isEmpty() return the right answer with no special-casing?
+= The constructor sets the topIndex as 0 right after stack is created. TopIndex represents the next free slot in the array. Since nothing has been pushed yet topIndex starts at 0 as there are 0 elements in the array and since isEmpty() only checks whether topIndex == 0 there is no need for a special casing.

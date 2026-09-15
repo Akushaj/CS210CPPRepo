@@ -30,16 +30,13 @@ int Stack::peek() const {
 }
 
 bool Stack::isEmpty() const {
-    // TODO: return whether data_ has zero elements
     return topIndex == 0;
 }
 
 bool Stack::isFull() const {
-    // TODO
-    return false;
+    return topIndex == 100;
 }
 
 int Stack::size() const {
-    // TODO: return how many elements are in data_ (cast to int)
-    return 0;
+    return topIndex;
 }

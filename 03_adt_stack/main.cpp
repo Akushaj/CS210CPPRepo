@@ -13,13 +13,32 @@ int main() {
     s.push(10);
     s.push(20);
     s.push(30);
+    s.push(40);
+    s.push(100);
 
     std::cout << "Stack size: " << s.size() << std::endl;
     std::cout << "Top: " << s.peek() << std::endl;
 
     s.pop();
     std::cout << "After pop, top: " << s.peek() << std::endl;
+    s.pop();
+    std::cout << "After pop, top: " << s.peek() << std::endl;
+
+    std::cout << "Stock size: " << s.size() << std::endl;
+
     std::cout << "Is empty? " << (s.isEmpty() ? "yes" : "no") << std::endl;
+
+    for (int i = 0 ; i < 97 ; i++) { // 97 more pushes so 3 + 97 = 100 completely full
+        s.push(i);
+    }
+    s.push(100); // one more push past 100 so , it should print the stack is full
+    std::cout << "Stack size: " << s.size() << std::endl;
+
+    for (int i = 0 ; i < 100 ; i++) { // pop all 100
+        s.pop();
+    }
+    s.pop(); // one more pop past 0 , it should print the stack is empty 
+    std::cout << "Stack size: " << s.size() << std::endl;
 
     return 0;
 }

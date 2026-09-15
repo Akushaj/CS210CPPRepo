@@ -1,3 +1,6 @@
 ## REFLECTION QUESTIONS
 ### Qn1. What value does topIndex hold immediately after construction, and why does that specific value make isEmpty() return the right answer with no special-casing?
 = The constructor sets the topIndex as 0 right after stack is created. TopIndex represents the next free slot in the array. Since nothing has been pushed yet topIndex starts at 0 as there are 0 elements in the array and since isEmpty() only checks whether topIndex == 0 there is no need for a special casing.
+
+### Qn2 Walk through push step by step, in words: what happens to data and topIndex, in what order, and why would swapping that order break the stack?
+= So at first the push method through the use of if statement sees if the Stack is full or not. So ifFull() is true then it prints out a statement saying that the Stack is full and ends the method with the return. If it is false then it skips the if statement and at data[topIndex ] which is at position 0 (for topIndex = 0) will be assigned the value. After that the topIndex is incremented by 1.
